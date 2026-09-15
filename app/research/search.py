@@ -8,7 +8,7 @@ from app.schemas.research import(
 )
 
 client = TavilyClient(
-    api_key = settings.taviliy_api_key
+    api_key = settings.tavily_api_key
 )
 
 def search_web(

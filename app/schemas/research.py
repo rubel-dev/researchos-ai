@@ -8,7 +8,7 @@ class SearchQuery(BaseModel):
     purpose: str
 
 class QueryPlan(BaseModel):
-    querires: list[SearchQuery]
+    queries: list[SearchQuery]
 
 class SearchResult(BaseModel):
     title: str

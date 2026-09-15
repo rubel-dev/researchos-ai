@@ -7,6 +7,6 @@ class Settings(BaseSettings):
     )
     gemini_api_key:str
     gemini_model:str = "gemini-3.8-flash"
-    taviliy_api_key:str
+    tavily_api_key:str
 
 settings = Settings()
