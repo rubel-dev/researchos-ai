@@ -19,3 +19,32 @@ class QuerySearchResult(BaseModel):
     query: str
     purpose: str
     results: list[SearchResult]
+
+class ExtractedSource(BaseModel):
+    url: str
+    content: str
+
+class SourceChunk(BaseModel):
+    source_url: str
+    chunk_id: str
+    content: str
+
+class EmbeddedChunk(BaseModel):
+    source_url: str
+    chunk_id: str
+    content: str
+    embedding: list[float]
+
+class RetrievedChunk(BaseModel):
+    source_url: str
+    chunk_id: str
+    content: str
+    similarity:float
+
+class Citation(BaseModel):
+    chunk_id: str
+    source_url: str
+
+class ResearchAnswer(BaseModel):
+    answer: str
+    citations: list[Citation]
